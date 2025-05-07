@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dungeon Adventure</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dungeon Adventure</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-mode">
+<body>
+  <div class="game-container">
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">Switch to Dark Mode</button>
+    <button id="restart-button" onclick="restartGame()">Restart Game</button>
 
-    <div id="top-bar">
-        <div id="game-status">
-            <p id="status-level">Level: 1</p>
-            <p id="status-health">Health: 100</p>
-            <p id="status-potions">Potions: 3</p>
-        </div>
-        <button id="theme-toggle">Toggle Light/Dark Mode</button>
+    <div id="game-status">
+      <p id="status-level">Level: 1</p>
+      <p id="status-health">Health: 100</p>
+      <p id="status-potions">Potions: 3</p>
+      <p id="status-weapon">Weapon: Fist</p>
+      <p id="status-scroll">Scroll: None</p>
     </div>
 
-    <div id="game-output"></div>
-    <input id="game-input" type="text" placeholder="Enter your action here...">
+    <div id="game-output" class="output-box"></div>
+    <input id="game-input" type="text" placeholder="Enter your action here..." />
+  </div>
 
-    <script src="game.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
